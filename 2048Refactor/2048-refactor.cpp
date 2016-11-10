@@ -17,7 +17,6 @@ enum gameState {
 	GAME_WIN = 2,
 	GAME_CONTINUE = 3
 };
-
 typedef enum gameState GameState;
 
 enum gameNum
@@ -32,7 +31,7 @@ enum gameNum
 	Game_256 = 256,
 	Game_512 = 512,
 	Game_1024 = 1024,
-	Game_2048 = 2048,
+	Game_2048 = 2048
 };
 
 typedef enum gameNum GameNum;
@@ -51,7 +50,7 @@ public:
 	int shiftDown();
 	void createNumber();
 	Direction getInput();
-	GameState Judge();
+	GameState judge();
 };
 
 Board::Board(int row, int col) : ROW(row), COL(col) 
@@ -91,3 +90,39 @@ int Board::update(Direction d)
 	return result;
 }
 
+int Board::shiftUp()
+{
+	return 0;
+}
+
+int Board::shiftDown()
+{
+	return 0;
+}
+
+int Board::shiftLeft()
+{
+	return 0;
+}
+
+int Board::shiftRight()
+{
+	return 0;
+}
+
+void Board::createNumber()
+{
+
+}
+
+Direction Board::getInput()
+{
+
+	return UP;
+}
+
+GameState Board::judge()
+{
+	
+	return GAME_CONTINUE;
+}
