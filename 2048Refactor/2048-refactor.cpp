@@ -7,15 +7,15 @@ using namespace std;
 enum direction {
 	UP = 1,
 	DOWN = 2,
-	LEFT = 3,
-	RIGHT = 4
+	LEFT = 4,
+	RIGHT = 8
 };
 typedef enum direction Direction;
 
 enum gameState {
 	GAME_OVER = 1,
 	GAME_WIN = 2,
-	GAME_CONTINUE = 3
+	GAME_CONTINUE = 4
 };
 typedef enum gameState GameState;
 
@@ -90,6 +90,8 @@ int Board::update(Direction d)
 	return result;
 }
 
+//Note: Once a piece has merged in a shift operation,
+//		it cannot merge again.
 int Board::shiftUp()
 {
 	return 0;
